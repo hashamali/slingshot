@@ -1,0 +1,43 @@
+{
+    "name": "Slingshot",
+    "description": "Slingshot is a web application that forwards the the body of a POST request to a set of emails.",
+    "keywords": [
+        "productivity",
+        "forms",
+        "forward",
+        "email",
+        "Go"
+    ],
+    "repository": "https://github.com/hashamali/slingshot",
+    "env": {
+        "USE_ENV_VARS": {
+            "description": "Tells slingshot to use environment variables for configuration.",
+            "value": true
+        },
+        "SMTP_HOST": {
+            "description": "The SMTP host to connect to.",
+            "value": "smtp.example.com"
+        },
+        "SMTP_PORT": {
+            "description": "The SMTP port to connect to.",
+            "value": 587
+        },
+        "SMTP_PASSWORD": {
+            "description": "The password for your account with the SMTP provider.",
+            "value": "PASSWORD"
+        },
+        "EMAIL_FROM": {
+            "description": "The email to send from.",
+            "value": "you@example.com"
+        },
+        "EMAIL_TO": {
+            "description": "The emails to send to. Comma separated list.",
+            "value": "recipient1@example.com,recipient2@example.com"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/go"
+        }
+    ]
+}

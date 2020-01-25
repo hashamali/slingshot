@@ -1,0 +1,7 @@
+smtpHost: smtp.example.com
+smtpPort: 587 
+smtpPassword: PASSWORD 
+emailFrom: you@example.com
+emailTo:
+  - recipient1@gmail.com
+  - recipient2@gmail.com
