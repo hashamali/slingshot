@@ -1,14 +1,15 @@
 package config
 
 import (
-	"github.com/spf13/viper"
 	"github.com/kelseyhightower/envconfig"
+	"github.com/spf13/viper"
 )
 
 // Config contains config for this project.
 type Config struct {
-	SMTPConfig `mapstructure:",squash"`
-	EmailsConfig `mapstructure:",squash"`
+	SMTPConfig      `mapstructure:",squash"`
+	EmailsConfig    `mapstructure:",squash"`
+	RecaptchaConfig `mapstructure:",squash"`
 }
 
 // GetConfigFromEnvVars get config from environment variables.

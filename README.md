@@ -43,6 +43,7 @@ Slingshot can be configured via environment variables or by editing `config.yaml
 * `SMTP_PASSWORD`: The password for your SMTP email account.
 * `EMAIL_FROM`: The email account to send from.
 * `EMAIL_TO`: The emails to send to. If more than one recipient, use a comma separated list.
+* `RECAPTCHA_SECRET`: Optional if reCAPTCHA token validation is needed. 
 
 ###### Example
 
@@ -55,6 +56,7 @@ Slingshot can be configured via environment variables or by editing `config.yaml
 * `smtpPassword`: The password for your SMTP email account.
 * `emailFrom`: The email account to send from.
 * `emailTo`: The emails to send to.
+* `recaptchaSecret`: Optional if reCAPTCHA token validation is needed. 
 
 ###### Example
 
