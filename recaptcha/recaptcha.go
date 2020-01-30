@@ -17,7 +17,11 @@ type recaptchaResponse struct {
 
 // Validate will validate a reCAPTCHA token if applicable.
 func Validate(responseToken string, c config.RecaptchaConfig) bool {
-	if c.Secret != "" && responseToken != "" {
+	if c.Secret != "" {
+		if responseToken == "" {
+			return false
+		}
+
 		r, err := http.PostForm(recaptchaURL, url.Values{"secret": {c.Secret}, "response": {responseToken}})
 		if err != nil {
 			return false
